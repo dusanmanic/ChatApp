@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Bootcamp chat app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header >
+        <h2> IT Bootcamp chat</h2>
+        <h4 id="unos">Choose a chatroom</h4>
+    </header>
+    <div id="container">
+        <div id="buttons">
+            <button id="general">#general</button>
+            <button id="js">#js</button>
+            <button id="homework">#homework</button>
+            <button id="tests">#tests</button>
+        </div>
+
+        <section>
+            <ul>
+
+            </ul>
+        </section>
+
+        <div class="forme">
+
+            <form action="#" id="formDateTime" class="dateTime">
+                <input type="datetime-local" name="startDate" id="inputDateOne" class="setDates">
+                <input type="datetime-local" name="endDate" id="inputDateTwo" class="setDates">
+                <input type="submit" id="btnDateTime" value="Set dates" class="btn">
+            </form>
+
+            <form action="#" id="formColorSelect" class="colorSelect">
+                <input type="color" name="" id="inputColorSelect">
+                <input type="submit" value="Update color" id="btnColor" class="btn">               
+            </form>
+        
+            <form id="formUsername" class="username">
+                <input type="text" placeholder="Update username" id="inputUsername">
+                <input type="submit" value="Update username" id="btnUpdate" class="btn">
+            </form>
+                   
+            <form id="formMessage">
+                <textarea type="textarea" placeholder="Your message..." id="inputMessage" autocomplete="off"></textarea>
+                <input type="submit" value="Send" id="btnSend" class="btn">
+                
+            </form>
+        
+            <button id="btnOpcije" class="btn">Options</button>
+            <button id="btnSound" class="btn">Notification <span id="notif"> off</span> </button>
+        </div>
+    
+    </div>
+
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBtTaJifHoJiQKUT4-DRBVRepABHpDtuCg",
+        authDomain: "itbootcamp-chat-dusanmanic.firebaseapp.com",
+        databaseURL: "https://itbootcamp-chat-dusanmanic.firebaseio.com",
+        projectId: "itbootcamp-chat-dusanmanic",
+        storageBucket: "itbootcamp-chat-dusanmanic.appspot.com",
+        messagingSenderId: "20164367852",
+        appId: "1:20164367852:web:537a9a6cc4c608c487dcc9"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    let db = firebase.firestore()
+    </script>
+    
+
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>

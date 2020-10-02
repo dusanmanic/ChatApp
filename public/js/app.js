@@ -148,7 +148,7 @@ formMessage.addEventListener('submit', event => {
 
         if(!message.match(/^ *$/)) {
             chatroom.addChat(message)
-                .then(() => formMessage.reset())
+                .then(() => formMessage.reset(), inputMessage.focus())
                 .catch(error => console.log(error))
             setTimeout(() => {
                 updateScroll()
